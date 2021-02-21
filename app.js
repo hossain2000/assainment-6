@@ -28,6 +28,7 @@ const showImages = (images) => {
     });
 };
 
+
 const getImages = (query) => {
     setTimeout(() => {
         fetch(`https://pixabay.com/api/?key=${KEY}=${query}&image_type=photo&pretty=true`)
