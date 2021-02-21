@@ -175,18 +175,19 @@ firstClassMinusBtn.addEventListener('click', function () {
 
 // Increse Spinner
 function increaseSpinner(itemPlus) {
-    itemPlus.value++;
-
+   let valueToNember = parseInt(itemPlus.value);
+   document.querySelector('#duration').value = valueToNember += 1000;
 }
+
 // Decrease Spinner
 function decreaseSpinner(itemMinus) {
     let decValue = Number(itemMinus.value);
 
-    if (!decValue || decValue < 0) {
+    if (!decValue || decValue < 2000) {
         itemMinus.classList.add('error');
     } else {
-        itemMinus.value--;
-        itemMinus.value * 1000;
+        let valueNember = parseInt(itemMinus.value);
+        document.querySelector('#duration').value = valueNember -= 1000;
     }
 }
 
